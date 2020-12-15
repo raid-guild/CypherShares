@@ -4,13 +4,22 @@
     "forceConsistentCasingInFileNames": true,
     "lib": ["es5", "es6"],
     "module": "commonjs",
+    "baseUrl": ".",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "outDir": "dist",
     "resolveJsonModule": true,
     "sourceMap": true,
     "strict": true,
-    "target": "es5"
+    "target": "es5",
+    "paths": {
+      "@utils/*": [
+        "utils/*"
+      ],
+      "@typechain/*": [
+        "typechain/*"
+      ],
+    },
   },
   "exclude": ["node_modules"],
   "include": [
@@ -21,6 +30,7 @@
     "test/**/*",
     "typechain/**/*",
     "types/**/*",
+    "utils/**/*",
     "hardhat.config.ts"
   ]
 }
