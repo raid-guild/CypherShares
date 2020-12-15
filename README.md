@@ -1,6 +1,9 @@
-# Solidity Template
+# CypherShares Protocol Contract Repository
 
-My favourite setup for writing Solidity smart contracts.
+CypherShares is a new index protocol that offers the most comprehensive and liquid index products in crypto. Our initial index will be the CypherShares DeFi Index (csDEFI) and will hold at least 100 tokens of the best DeFi projects. CypherShares will use a novel Threshold Farming strategy in order to incentivise index liquidity.
+
+---
+## Tooling
 
 - [Hardhat](https://github.com/nomiclabs/hardhat): compile and run the smart contracts on a local development network
 - [TypeChain](https://github.com/ethereum-ts/TypeChain): generate TypeScript types for smart contracts
@@ -9,10 +12,7 @@ My favourite setup for writing Solidity smart contracts.
 - [Solhint](https://github.com/protofire/solhint): linter
 - [Solcover](https://github.com/sc-forks/solidity-coverage) code coverage
 - [Prettier Plugin Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity): code formatter
-
-This is a GitHub template, which means you can reuse it as many times as you want. You can do that by clicking the "Use this
-template" button at the top of the page.
-
+---
 ## Usage
 
 ### Pre Requisites
