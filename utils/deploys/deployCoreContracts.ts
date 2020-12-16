@@ -3,13 +3,15 @@ import { BigNumberish } from "@ethersproject/bignumber";
 
 import {
     Controller,
-    CSToken
+    CSToken,
+    CSTokenCreator,
 } from "./../contracts";
 
 import { Address } from "./../types";
 
 import { ControllerFactory } from "../../typechain/ControllerFactory";
 import { CsTokenFactory as CSTokenFactory } from "../../typechain/CsTokenFactory";
+import { CsTokenCreatorFactory as CSTokenCreatorFactory } from "../../typechain/CsTokenCreatorFactory";
 
 export default class DeployCoreContracts { 
     private _deployerSigner: Signer;
@@ -40,5 +42,9 @@ export default class DeployCoreContracts {
             _name,
             _symbol,
         );
+    }
+
+    public async deployCSTokenCreator(controller: Address): Promise<CSTokenCreator> {
+        return await new CSTokenCreatorFactory(this._deployerSigner).deploy(controller);
     }
 }

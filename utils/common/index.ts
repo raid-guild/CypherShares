@@ -1,4 +1,5 @@
 export { Blockchain } from "./blockchainUtils";
+export { ProtocolUtils } from "./protocolUtils";
 export { ether, gWei, bitcoin, usdc } from "./unitsUtils";
 export {
     divDown,
