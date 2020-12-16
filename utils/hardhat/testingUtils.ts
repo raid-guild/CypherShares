@@ -12,7 +12,7 @@ const provider = ethers.provider;
 
 // HARDHAT-SPECIFIC Provider
 export const getProvider = (): JsonRpcProvider => {
-    return ethers.provider;
+    return ethers.provider as JsonRpcProvider;
 };
 
 // HARDHAT / WAFFLE
@@ -25,7 +25,7 @@ export const getWaffleExpect = (): Chai.ExpectStatic => {
 // otherwise it will update the block time of the EVM and future tests that expect a
 // starting timestamp will fail.
 export const addSnapshotBeforeRestoreAfterEach = () => {
-    const blockchain = new Blockchain(provider);
+    const blockchain = new Blockchain(provider as JsonRpcProvider);
     beforeEach(async () => {
         await blockchain.saveSnapshotAsync();
     });
