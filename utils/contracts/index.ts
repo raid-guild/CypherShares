@@ -12,4 +12,6 @@ export { CsValuer as CSValuer } from "../../typechain/CsValuer";
 export { StreamingFeeModule } from "../../typechain/StreamingFeeModule";
 export { Weth9 } from "../../typechain/Weth9";
 export { NavIssuanceModule } from "../../typechain/NavIssuanceModule";
+export { GovernanceModule } from "../../typechain/GovernanceModule";
+export { GovernanceAdapterMock } from "../../typechain/GovernanceAdapterMock";
 export { CsTokenCreator as CSTokenCreator } from "../../typechain/CsTokenCreator"

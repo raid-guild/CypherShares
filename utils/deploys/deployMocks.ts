@@ -7,7 +7,8 @@ import {
     StandardTokenWithFeeMock,
     ModuleBaseMock,
     OracleMock,
-    ManagerIssuanceHookMock
+    ManagerIssuanceHookMock,
+    GovernanceAdapterMock
 } from "../contracts";
 
 import { StandardTokenMockFactory } from "../../typechain/StandardTokenMockFactory";
@@ -15,6 +16,7 @@ import { StandardTokenWithFeeMockFactory } from "../../typechain/StandardTokenWi
 import { ModuleBaseMockFactory } from "../../typechain/ModuleBaseMockFactory";
 import { OracleMockFactory } from "../../typechain/OracleMockFactory";
 import { ManagerIssuanceHookMockFactory } from "../../typechain/ManagerIssuanceHookMockFactory";
+import { GovernanceAdapterMockFactory } from "../../typechain/GovernanceAdapterMockFactory";
 
 import { ether } from "../common";
 
@@ -57,6 +59,10 @@ export default class DeployMocks {
 
     public async deployOracleMock(initialValue: BigNumberish): Promise<OracleMock> {
         return await new OracleMockFactory(this._deployerSigner).deploy(initialValue);
+    }
+
+    public async deployGovernanceAdapterMock(initialProposalId: BigNumberish): Promise<GovernanceAdapterMock> {
+        return await new GovernanceAdapterMockFactory(this._deployerSigner).deploy(initialProposalId);
     }
 
     /*************************************

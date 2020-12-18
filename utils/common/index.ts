@@ -16,3 +16,4 @@ export {
     preciseMulCeilInt,
     preciseDivCeilInt
 } from "./mathUtils";
+export { addressToData, bigNumberToData, hashAdapterName } from "./adapterUtils";

@@ -15,6 +15,7 @@ export {
     divDown,
     ether,
     bitcoin,
+    bigNumberToData,
     preciseMul,
     getPostFeePositionUnits,
     getStreamingFee,

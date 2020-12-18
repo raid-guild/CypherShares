@@ -10,8 +10,7 @@
     {
       "files": "*.sol",
       "options": {
-        "tabWidth": 4,
-        "maxLineLength": 140
+        "tabWidth": 4
       }
     }
   ]
