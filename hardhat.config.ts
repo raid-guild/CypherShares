@@ -55,6 +55,9 @@ const config: HardhatUserConfig = {
   networks: {
     hardhat: {
       chainId: chainIds.hardhat,
+      accounts: {
+        accountsBalance: '100000000000000000000000'
+      }
     },
     goerli: createTestnetConfig("goerli"),
     kovan: createTestnetConfig("kovan"),

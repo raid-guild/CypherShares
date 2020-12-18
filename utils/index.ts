@@ -15,7 +15,10 @@ export {
     divDown,
     ether,
     bitcoin,
-    preciseMul
+    preciseMul,
+    getPostFeePositionUnits,
+    getStreamingFee,
+    getStreamingFeeInflationAmount,
 } from "./common";
 export {
     getAccounts,
