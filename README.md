@@ -15,7 +15,7 @@ CypherShares is a new index protocol that offers the most comprehensive and liqu
 - GovernanceModule: 0x31Dca181eF571FC86eCE79d85D311667d122F95a
 - StreamingFeeModule: 0x10974dC97962677f0d913E89ef6b93c2941B2332
 
-- Example Index (csDEFI): 0xAedE6e5FAa06E2f2544A2A152fC498323DB88A10
+- Example Index (csDEFI): 0x233Df1d25E2b4731d37E85a994C8B6F84F4Ef72D
 
 ---
 ## Tooling
