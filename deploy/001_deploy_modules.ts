@@ -15,6 +15,10 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
         mainnet: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
     }
 
+    const USDC = "0x2F375e94FC336Cdec2Dc0cCB5277FE59CBf1cAe5"
+    const ZRX = "0xccb0F4Cf5D3F97f4a55bb5f5cA321C3ED033f244"
+    const BAT = "0x1f1f156E0317167c11Aa412E3d1435ea29Dc3cCE"
+
     let wethAddr
     if (hre.hardhatArguments.network !== 'kovan' && hre.hardhatArguments.network !== 'mainnet') {
         const weth = await deploy('WETH9', { from: deployer })
@@ -76,8 +80,8 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
     
         const csTokenCreatorContract = await ethers.getContractAt('CSTokenCreator', csTokenCreator.address)
         await csTokenCreatorContract.create(
-            [wethAddr],
-            [ether(1)],
+            [USDC,ZRX,BAT],
+            ["1000000", ether(1), ether(1)],
             [
                 basicIssuanceModule.address,
                 navIssuanceModule.address,
