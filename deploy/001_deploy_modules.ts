@@ -54,6 +54,15 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
         log: true
     })
 
+    const SWAP_ROUTER = "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D"
+    const BALANCER_PROXY = "0x4e67bf5bD28Dd4b570FBAFe11D0633eCbA2754Ec"
+
+    const singleIndexModule = await deploy('SingleIndexModule', {
+        from: deployer,
+        args: [controller.address, wethAddr, SWAP_ROUTER, SWAP_ROUTER, BALANCER_PROXY],
+        log: true
+    })
+
     const controllerContract = await ethers.getContractAt('Controller', controller.address)
     const initialized = await controllerContract.isInitialized()
     if (!initialized) {
@@ -64,7 +73,8 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
                 basicIssuanceModule.address,
                 navIssuanceModule.address,
                 governanceModule.address,
-                streamingFeeModule.address
+                streamingFeeModule.address,
+                singleIndexModule.address,
             ],
             [],
             []
@@ -86,7 +96,8 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
                 basicIssuanceModule.address,
                 navIssuanceModule.address,
                 governanceModule.address,
-                streamingFeeModule.address
+                streamingFeeModule.address,
+                singleIndexModule.address,
             ],
             deployer,
             "Cypher Shares Defi Index",
